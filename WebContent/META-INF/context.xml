@@ -19,7 +19,7 @@
 	minEvictableIdleTimeMillis="60000"
 	antiJARLocking="false"
 	antiResourceLocking="false"
-	username="postgre"
+	username="postgres"
 	password="root"
 	url="jdbc:postgresql://localhost:5432/sis_jee?autoReconect=true"/>
 	<!-- Classe do tomcat que está lendo esse arquivo é org.apache.tomcat.dbcp.PoolingDataSource -->

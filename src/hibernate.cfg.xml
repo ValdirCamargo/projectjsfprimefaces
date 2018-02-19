@@ -24,7 +24,7 @@
 
 
 
-		<mapping class="" />
+		<mapping class="br.com.valdir.project.model.classes.Entidade" />
 
 
 		<listener class="org.hibernate.envers.event.AuditEventListener"

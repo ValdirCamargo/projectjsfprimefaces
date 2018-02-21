@@ -8,6 +8,6 @@ package br.com.valdir.framework.implement.crud;
 public class VariavelConexaoUtil {
 	
 	// VARIAVEL QUE RECUPERA O CAMINHO DO BANCO
-	public static String JAVA_COMP_ENV_JDBC_DATA_SOURCE = "java:/comp/env/env/jdbc/datasource";
+	public static String JAVA_COMP_ENV_JDBC_DATA_SOURCE = "java:/comp/env/jdbc/datasource";
  
 }

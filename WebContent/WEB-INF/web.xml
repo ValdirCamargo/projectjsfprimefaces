@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://java.sun.com/xml/ns/javaee"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp"
 	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" metadata-complete="true" version="3.0">
@@ -90,7 +91,7 @@
 	
 	<context-param>
 		<param-name>primefaces.THEME</param-name>
-		<param-value>bootstrap</param-value>
+		<param-value>smoothness</param-value>
 	</context-param>
 	
 	<filter>
@@ -149,15 +150,16 @@
 	</listener>
 	
 	<servlet>
-		<servlet-name>spring_servlet</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	
-	<servlet-mapping>
-		<servlet-name>spring_servlet</servlet-name>
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>
+  	<servlet-name>spring-servlet</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>spring-servlet</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
 	
 	<filter-mapping>
 		<filter-name>PrimeFaces FileUpload Filter</filter-name>

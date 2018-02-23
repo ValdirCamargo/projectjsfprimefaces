@@ -20,7 +20,7 @@ public class CustomListener implements RevisionListener, Serializable {
 		Long codUser = UtilFramework.getThreadLocal().get();
 		
 		Entidade entidade = new Entidade();
-		if(codUser != null && codUser !=0L){
+		if (codUser != null && codUser !=0L){
 			entidade.setEnt_codigo(codUser);
 			informacaoRevisao.setEntidade(entidade);
 		}

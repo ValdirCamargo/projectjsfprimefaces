@@ -46,7 +46,7 @@ public class FilterOpenSessionInView extends DelegatingFilterProxy implements
 
 		// JDBC Spring
 		BasicDataSource sprinBasicDataSource = (BasicDataSource) ContextLoaderListenerUtils
-				.getBean("springDataSoruce");
+				.getBean("springDataSource");
 		DefaultTransactionDefinition def = new DefaultTransactionDefinition();
 		PlatformTransactionManager transactionManager = new DataSourceTransactionManager(
 				sprinBasicDataSource);

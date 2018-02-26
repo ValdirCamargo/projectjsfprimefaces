@@ -6,6 +6,10 @@
 	
 }
 
+.borderImagem{
+	border: 0px;
+}
+
 .buttonPesquisa {
 	height: 20px;
 	width: 23px;

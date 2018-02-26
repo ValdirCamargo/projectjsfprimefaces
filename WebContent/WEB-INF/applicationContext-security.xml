@@ -10,51 +10,52 @@
 
 	<global-method-security  secured-annotations="enabled"/>
 	
-	<http auto-config="true" 
-		access-denied-page="/error/acessoNegado.xhtml"
-		use-expressions="true">
-
-		<intercept-url pattern="/cadastro/cad_permissao.jsf"
-			access="hasAnyRole('ADMIN')" method="POST" />
-
-		<intercept-url pattern="/resources/components/**"
-			access="isAuthenticated() and hasAnyRole('USER')" />
-
-		<intercept-url pattern="/resources/**"
-			access="isAuthenticated() and hasAnyRole('USER')" />
-
-		<intercept-url pattern="/restrito/**"
-			access="isAuthenticated() and hasAnyRole('USER')" />
-			
+	<http auto-config="true"
+			access-denied-page="/error/acessoNegado.xhtml" 
+			use-expressions="true">
+	  		
+	   <intercept-url pattern="/cadastro/cad_permissao.jsf" 
+	    access="hasAnyRole('ADMIN')" method="POST"/>
+	    
+	   <intercept-url pattern="/resources/components/**" 
+	   access="isAuthenticated() and hasAnyRole('USER')"/> 	
+	   
+	   <intercept-url pattern="/resources/**" 
+	   access="isAuthenticated() and hasAnyRole('USER')"/>
+	   
+	   <intercept-url pattern="/restrito/**" 
+		access="isAuthenticated() and hasAnyRole('USER')"/>
+		
 		<intercept-url pattern="/error/**" 
-			access="isAnonymous() or isAuthenticated() or !isAuthenticated()"/>
-
+		access="isAnonymous() or isAuthenticated() or !isAuthenticated()"/>
+		
 		<intercept-url pattern="/templates/**"
-			access="isAuthenticated() and hasAnyRole('USER')" />
-
-		<intercept-url pattern="/cadastro/**"
-			access="isAuthenticated() and hasAnyRole('USER')" />
-
-		<intercept-url pattern="/publico/" access="permitAll" />
-
-		<form-login login-page="/publico/login.jsf"
-			always-use-default-target="true" default-target-url="/restrito/principal.jsf"
-			authentication-failure-url="/publico/login.jsf?login?_error=1" />
-
-		<logout invalidate-session="true" logout-success-url="/publico/login.jsf"
-			logout-url="/j_spring_security_logout" delete-cookies="JSESSIONID" />
-
-		<remember-me token-validity-seconds="120960" />
-
+		 access="isAuthenticated() and hasAnyRole('USER')"/>
+		 
+		 <intercept-url pattern="/cadastro/**" 
+		access="isAuthenticated() and hasAnyRole('USER')"/>
+		
+		<intercept-url pattern="/publico/**" access="permitAll" /> 
+		
+		<form-login login-page="/publico/login.jsf" 
+		always-use-default-target="true" default-target-url="/restrito/principal.jsf"
+		authentication-failure-url="/publico/login.jsf?login_error=1"/>
+		
+		<logout invalidate-session="true" logout-success-url="/publico/login.jsf" 
+		  logout-url="/j_spring_security_logout" delete-cookies="JSESSIONID"/>
+		  
+		<remember-me token-validity-seconds="1209600"/>	
+		
 		<session-management invalid-session-url="/publico/login.jsf"
-			session-fixation-protection="migrateSession">
-			<concurrency-control max-sessions="1"
-				expired-url="/publico/login.jsf" 
-				error-if-maximum-exceeded="true" />
-		</session-management>
-
+		   session-fixation-protection="migrateSession">
+		   <concurrency-control max-sessions="1"
+		    expired-url="/publico/login.jsf"
+		    error-if-maximum-exceeded="true"/>
+		
+		</session-management>	
+	
 	</http>
-
+	
 	<authentication-manager>
 		 <authentication-provider>
 		 		<password-encoder hash="plaintext"/>
@@ -76,6 +77,6 @@
 										and upper(u.ent_login) = upper(?)"/>
 		 </authentication-provider>
 	</authentication-manager>
+	
 
-</b:beans>
-
+ </b:beans>

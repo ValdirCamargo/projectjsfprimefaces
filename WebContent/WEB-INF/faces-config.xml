@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE xml>
 <faces-config version="2.0" xmlns="http://java.sun.com/xml/ns/javaee"
-	xmlns:xi="http://www.w33.org/2001/XInclude" 
-	xmlns:xsi="http://www.w3.or/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
 	
 	<application>
 		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
 		
 		<system-event-listener>
-			<system-event-listener-class>br.com.valdir.project.bean.geral.ViewScopeCallbackRegister</system-event-listener-class>
-			<system-event-class>javax.faces.event.PostConstructViewMapEvent</system-event-class>
-			<source-class>javax.faces.component.UIViewRoot</source-class>
-		</system-event-listener>
+	  	<system-event-listener-class>br.com.valdir.project.bean.geral.ViewScopeCallbackRegister</system-event-listener-class>
+	  	<system-event-class>javax.faces.event.PostConstructViewMapEvent</system-event-class>
+	  	<source-class>javax.faces.component.UIViewRoot</source-class>
+	  	</system-event-listener>
+		
 		
 		<system-event-listener>
-			<system-event-listener-class>br.com.valdir.project.bean.geral.ViewScopeCallbackRegister</system-event-listener-class>
-			<system-event-class>javax.faces.event.PreDestroyViewMapEvent</system-event-class>
-			<source-class>javax.faces.component.UIViewRoot</source-class>
-		</system-event-listener>
+	  	<system-event-listener-class>br.com.valdir.project.bean.geral.ViewScopeCallbackRegister</system-event-listener-class>
+	  	<system-event-class>javax.faces.event.PreDestroyViewMapEvent</system-event-class>
+	  	<source-class>javax.faces.component.UIViewRoot</source-class>
+	    </system-event-listener>
 		
 		<action-listener>org.primefaces.application.DialogActionListener</action-listener>
 		<navigation-handler>org.primefaces.application.DialogNavigationHandler</navigation-handler>
@@ -27,6 +27,7 @@
 		
 	
 	</application>
+	
 	
 	<factory>
 		<exception-handler-factory>br.com.valdir.project.exception.CustomExcepitionHandlerFactory</exception-handler-factory>

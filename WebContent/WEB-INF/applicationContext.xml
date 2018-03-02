@@ -116,6 +116,9 @@
 	
 	<bean id="reportUtil" class="br.com.valdir.project.report.util.ReportUtil"/>
 	<bean id="utilFramework" class="br.com.valdir.framework.utils.UtilFramework" scope="session"/>
+	<bean id="sessionController" class="br.com.valdir.project.geral.controller.SessionControllerImpl" scope="singleton" />
+	
+	
 	
 			
 				

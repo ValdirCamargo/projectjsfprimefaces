@@ -116,6 +116,15 @@
 	
 	<bean id="reportUtil" class="br.com.valdir.project.report.util.ReportUtil"/>
 	<bean id="utilFramework" class="br.com.valdir.framework.utils.UtilFramework" scope="session"/>
+		
+	<!-- Services -->
+	<bean id="srvLogin" class="br.com.valdir.srv.implementacao.SrvLoginImpl"/>
+	
+	<!-- DAOS -->
+	<bean id="repositoryLogin" class="br.com.valdir.dao.implementacao.DaoLogin"/>
+	
+	
+	<!-- Controllers -->
 	<bean id="sessionController" class="br.com.valdir.project.geral.controller.SessionControllerImpl" scope="singleton" />
 	
 	
